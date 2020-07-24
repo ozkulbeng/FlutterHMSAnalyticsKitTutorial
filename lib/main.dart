@@ -39,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _enableLog() async {
     await hmsAnalytics.enableLog();
-    debugPrint("enable log girdi");
   }
 
   Future<void> _sendEvent(int count) async {
@@ -49,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
       'range' : getRangeFromCount(count)
     };
     await hmsAnalytics.onEvent(name, value);
-    debugPrint("send event girdi");
   }
 
   @override
@@ -61,7 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint(randomNumber.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text("HMS Analytics Kit Example"),
